@@ -243,25 +243,7 @@ p {
   text-transform: uppercase;
   padding-top: 200px;
 }
-/* ---- Hero-title underline ---- */
-.hero-title::after {
-  content: "";
-  display: block;
-  width: 800px;
-  height: 5px;
-  background-color: var(--accent-color);
-  margin: 0 auto;
-  margin-top: 0px;
-}
-.hero-title::before {
-  content: "";
-  display: block;
-  width: 800px;
-  height: 5px;
-  background-color: var(--accent-color);
-  margin: 0 auto;
-  margin-top: 0px;
-}
+
 .hero-button {
     color: var(--main-background-color);
     background-color: var(--accent-color);
