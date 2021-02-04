@@ -188,9 +188,13 @@ p {
   letter-spacing: 0.02em;
   }
 
-.contacts .link:hover,
-.contacts .link:focus {
+.mail-link:hover,
+.mail-link:focus {
   color: var(--accent-color);
+}
+.mail-link:hover .icon-envelope,
+.mail-link:focus .icon-envelope {
+  fill: var(--accent-color);
 }
 .icon-envelope {
   width: 16px;
@@ -198,19 +202,21 @@ p {
   margin-right: 10px;
   fill: var(--secondary-text-color)
 }
-.icon-envelope:hover,
-.icon-envelope:focus {
-  fill:var(--accent-color);
+.phone-link:hover, 
+.phone-link:focus {
+  color: var(--accent-color);
 }
+
+.phone-link:hover .icon-smartphone , 
+.phone-link:focus .icon-smartphone {
+  fill: var(--accent-color);
+}
+
 .icon-smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   fill: var(--secondary-text-color);
-}
-.icon-smartphone:hover,
-.icon-smartphone:focus {
-  fill:var(--accent-color);
 }
 /* == end nav == */
 /* ====End header=== */
@@ -236,6 +242,25 @@ p {
   margin-bottom: 30px;
   text-transform: uppercase;
   padding-top: 200px;
+}
+/* ---- Hero-title underline ---- */
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 5px;
+  background-color: var(--accent-color);
+  margin: 0 auto;
+  margin-top: 0px;
+}
+.hero-title::before {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 5px;
+  background-color: var(--accent-color);
+  margin: 0 auto;
+  margin-top: 0px;
 }
 .hero-button {
     color: var(--main-background-color);
@@ -419,8 +444,7 @@ p {
   height:44px;
   border-radius: 50%;
 }
-.social-list-link:hover, ds  
-
+.social-list-link:hover, 
 .social-list-link:focus {
   background-color: var(--accent-color);
 }
@@ -449,7 +473,7 @@ p {
 }
 /* === Clients section === */
 .clients {
-  margin-top: 94px;
+  padding-top: 94px;
 }
 .clients-title {
   font-weight: 700;
@@ -458,25 +482,37 @@ p {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .clients-list {
   display: flex;
   justify-content: space-between;
 }
-.clients-list-item::before {
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px var(--social-icon-color) solid;
   border-radius: 5px;
-  display: block;
-  content: "";
-  background-repeat: no-repeat;
-  background-position: center;
   
   width: 170px;
   height: 90px;
 }
-.icon-client::before {
-  background-image: url(../img/client1.png);
-  background-repeat: no-repeat;
-  background-position: center;
+
+.clients-icon {
+  width: 45px;
+  height: 50px;
+  fill: var(--social-icon-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border:1px var(--accent-color) solid;
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* === Portfolio CSS === */
@@ -572,6 +608,10 @@ p {
 .card-text {
   color: var(--accent-color);
 }
+.card:hover,
+.card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
   /*----End  fortfolio features---- */
   
 
@@ -590,12 +630,15 @@ p {
 }
 .footer .container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* padding-top: 60px;
   margin-bottom: 60px; */
 }
 .adress {
   color: var(--footer-adress-color);
+}
+.footer-contacts {
+  margin-right: 70px;
 }
 .footer-list {
   display: flex;
@@ -609,5 +652,48 @@ p {
 .footer-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-form {
 
+}
+.footer-form-title {
+  color: var(--main-background-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-form-list {
+  display: flex;
+}
+.footer-form-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height:44px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  background-size: cover ;
+}
+
+.footer-form-items:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-form-icons {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-background-color);
+}
+
+.footer-form-items:hover,
+.footer-form-items:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-form-items:hover .footer-form-icons,
+.footer-form-items:focus .footer-form-icons {
+  fill: var(--main-background-color);
+}
 /* ===End footer */
