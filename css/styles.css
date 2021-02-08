@@ -232,16 +232,18 @@ p {
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.06em;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 } 
 .hero .container {
-  padding-bottom: 200px;
+  
 }
 
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
-  padding-top: 200px;
 }
 
 .hero-button {
@@ -381,7 +383,7 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: var(--main-background-color);
-  margin: 15px;
+  /* margin: 15px; */
   /* margin-bottom: -15px; */
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -392,11 +394,10 @@ p {
 .member-card-content {
   display: flex;
   flex-direction: column;
-
+  
+  margin:0 auto;
   padding-top: 30px;
-  padding-right: 32px;
   padding-bottom: 30px;
-  padding-left: 32px;
 }
 .member-name {
   font-weight: 500;
@@ -482,7 +483,7 @@ p {
 }
 
 .clients-icon {
-  width: 45px;
+  min-width: 45px;
   height: 50px;
   fill: var(--social-icon-color);
 }
@@ -513,7 +514,11 @@ p {
   justify-content: center;
   margin-bottom: 50px;
   font-family: inherit;
+ 
+}
+.filter-name {
   cursor: pointer;
+  border-radius: 5px;
 }
 .filter-buttons-item:not(:last-child) {
   margin-right: 8px;
@@ -612,9 +617,8 @@ p {
 }
 .footer .container {
   display: flex;
-  /* flex-direction: column; */
-  /* padding-top: 60px;
-  margin-bottom: 60px; */
+  align-self: baseline;
+  
 }
 .adress {
   color: var(--footer-adress-color);
@@ -669,13 +673,11 @@ p {
   fill: var(--main-background-color);
 }
 
-.footer-form-items:hover,
-.footer-form-items:focus {
+.footer-form-items:hover {
   background-color: var(--accent-color);
 }
 
-.footer-form-items:hover .footer-form-icons,
-.footer-form-items:focus .footer-form-icons {
+.footer-form-items:hover .footer-form-icons {
   fill: var(--main-background-color);
 }
 /* ===End footer */
